@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मोबाइल शॉप</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style1.css">
+    <style>
+        /* login.html के लिए अतिरिक्त CSS (या इसे style.css में जोड़ें) */
+        .auth-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: var(--card-bg, #fff); /* Light Mode */
+        }
+        body.dark-mode .auth-container {
+             background-color: #1f1f1f; /* Dark Mode */
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        .auth-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        .auth-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .auth-form input[type="email"],
+        .auth-form input[type="password"],
+        .auth-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: inherit;
+            color: inherit;
+        }
+        .auth-form .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .auth-form .tabs button {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #eee;
+        }
+        .auth-form .tabs button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <div class="logo">📱 MobileWorld</div>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Brands ▼</a>
+                    <div class="dropdown-content">
+                        <a href="apple.html">Apple</a>
+                        <a href="android.html">Android</a>
+                        <a href="oppo.html">Oppo</a>
+                        <a href="vivo.html">Vivo</a>
+                        <a href="realme.html">Realme</a>
+                        <a href="samsung.html">Samsung</a>
+                        <a href="moto.html">Moto</a>
+                    </div>
+                </li>
+                <li><a href="../contact/contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        
+        <div class="utility-bar">
+            <div class="search-box">
+                <input type="text" placeholder="मोबाइल सर्च करें..." id="searchInput">
+                <button type="submit">🔍</button>
+            </div>
+            
+            <button id="themeToggle" class="toggle-btn">
+                <span class="icon">☀️</span> </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h1>अकाउंट एक्सेस करें</h1>
+            
+            <div class="auth-form">
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="showForm('login')">Login</button>
+                    <button class="tab-btn" onclick="showForm('signup')">Sign Up</button>
+                </div>
+
+                <form id="loginForm" action="#" method="POST">
+                    <label for="loginEmail">ईमेल:</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                    
+                    <label for="loginPassword">पासवर्ड:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%;">Login</button>
+                    <p style="text-align: center; margin-top: 15px;"><a href="#">पासवर्ड भूल गए?</a></p>
+                </form>
+
+                <form id="signupForm" action="#" method="POST" style="display:none;">
+                    <label for="signupName">पूरा नाम:</label>
+                    <input type="text" id="signupName" name="name" required>
+
+                    <label for="signupEmail">ईमेल:</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                    
+                    <label for="signupPassword">पासवर्ड (न्यूनतम 6 अक्षर):</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%;">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2025 मोबाइल शॉप। सभी अधिकार सुरक्षित।</p></footer>
+
+    <script src="../script1.js"></script>
+    <script>
+        function showForm(formType) {
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const tabs = document.querySelectorAll('.tab-btn');
+
+            if (formType === 'login') {
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+                tabs[0].classList.add('active');
+                tabs[1].classList.remove('active');
+            } else {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+                tabs[0].classList.remove('active');
+                tabs[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

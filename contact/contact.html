@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मोबाइल शॉप</title>
+    <link rel="stylesheet" href="../style1.css">
+</head>
+<body>
+    <header>
+        <div class="logo">📱 MobileWorld</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Brands ▼</a>
+                    <div class="dropdown-content">
+                        <a href="../brand/apple/apple.html">Apple</a>
+                        <a href="../brand/android/android.html">Android</a>
+                        <a href="../brand/oppo/oppo.html">Oppo</a>
+                        <a href="../brand/vivo/vivo.html">Vivo</a>
+                        <a href="../brand/realme/realme.html">Realme</a>
+                        <a href="../brand/samsang/samsang.html">Samsung</a>
+                        <a href="../brand/moto/moto.html">Moto</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="../login/login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="utility-bar">
+            <div class="search-box">
+                <input type="text" placeholder="मोबाइल सर्च करें..." id="searchInput">
+                <button type="submit">🔍</button>
+            </div>
+            <button id="themeToggle" class="toggle-btn">
+                <span class="icon">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="contact-section">
+            <h1>हमसे संपर्क करें</h1>
+            <p>हम आपकी सहायता के लिए 24/7 उपलब्ध हैं।</p>
+
+            <div class="contact-details">
+                <div class="detail-card">
+                    <h3>पता</h3>
+                    <p>शॉप नंबर 101, टेक्नोलॉजी टॉवर, नई दिल्ली - 110001</p>
+                </div>
+                <div class="detail-card">
+                    <h3>फोन</h3>
+                    <p>+91 98765 43210</p>
+                    <p>+91 99887 76655</p>
+                </div>
+                <div class="detail-card">
+                    <h3>ईमेल</h3>
+                    <p>support@mobileworld.com</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2>संदेश भेजें</h2>
+                <form action="#" method="POST" class="contact-form">
+                    <label for="name">नाम:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">ईमेल:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="subject">विषय:</label>
+                    <input type="text" id="subject" name="subject" required>
+                    
+                    <label for="message">आपका संदेश:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                    
+                    <button type="submit" class="cta-button">संदेश भेजें</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 मोबाइल शॉप। सभी अधिकार सुरक्षित।</p>
+    </footer>
+
+    <script src="../script1.js"></script>
+</body>
+</html>
